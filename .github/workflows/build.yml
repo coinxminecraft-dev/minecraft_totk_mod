@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip FusionTotK_Fabric_26_2_source_fixed.zip
+      - run: sed -i 's/^loom_version=.*/loom_version=1.17-SNAPSHOT/' FusionTotK/gradle.properties
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
